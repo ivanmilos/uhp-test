@@ -1,0 +1,115 @@
+::-moz-selection {
+	background: $blue;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: $blue;
+	color: #fff;
+	text-shadow: none;
+}
+:focus { 
+    outline: none; 
+}
+
+html {
+	position: relative;
+	min-width: 320px;
+	min-height: 100%;
+	font-size: 62.5%;
+	line-height: 1;
+	font-family: $font-stack;
+	color: $dark-blue;
+
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: rgb(7,57,192);
+		background: linear-gradient(90deg, rgba(7,57,192,1) 0%, rgba(30,120,230,1) 36%, rgba(102,191,248,1) 76%, rgba(131,199,249,1) 100%);
+		width: 70vw;
+		height: 74vw;
+
+		@include mq-min($lg) {
+			width: 850px;
+			height: 920px;
+		}
+		@include mq-min($xl) {
+			width: 1020px;
+			height: 1100px;
+		}
+		@include mq-min($xxl) {
+			width: 1120px;
+			height: 1190px;
+		}
+		@include mq-min($xxxl) {
+			width: 65vw;
+			height: 70vw;
+		}
+	}
+}
+body {
+	position: relative;
+	font-size: 1.6rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		border-style: solid;
+		border-color: transparent transparent transparent $white;
+		border-width: 74vw 0 0 70vw;
+
+		@include mq-min($lg) {
+			border-width: 920px 0 0 850px;
+		}
+		@include mq-min($xl) {
+			border-width: 1100px 0 0 1020px;
+		}
+		@include mq-min($xxl) {
+			border-width: 1190px 0 0 1120px;
+		}
+		@include mq-min($xxxl) {
+			border-width: 70vw 0 0 65vw;
+		}
+	}
+}
+b, strong {
+	font-weight: 700;
+}
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.container {
+	position: relative;
+	max-width: 1420px;
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-left: 20px;
+
+	@include mq-min($lg) {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+}
+
+
+// UTILITIES
+.clearfix {
+	@include clearfix();
+}
+.img-wrapper img,
+.iw img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
+}

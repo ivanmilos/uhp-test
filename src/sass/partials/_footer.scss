@@ -1,0 +1,189 @@
+.footer {
+	position: relative;
+	background: $dark-blue;
+	color: $white;
+	padding-top: 50px;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		display: block;
+		height: 56px;
+		background: url('../../images/logo-footer.svg') 50% 0 no-repeat;
+		margin: 0 auto 30px;
+
+		@include mq-min($md) {
+			margin-bottom: 50px;
+		}
+		@include mq-min($xl) {
+			margin-bottom: 80px;
+		}
+	}
+
+	.container {
+		max-width: 1200px;
+		padding: 0 15px;
+		text-align: center;
+
+		@include mq-min($sm) {
+			padding: 0 30px;
+		}
+	}
+
+	a {
+		transition: all .15s ease-in-out;
+	}
+
+	.to-top {
+		position: absolute;
+		bottom: -66px;
+		left: 50%;
+		width: 116px;
+		height: 116px;
+		border-radius: 50%;
+		background: $blue;
+		margin-left: -58px;
+		text-align: center;
+		cursor: pointer;
+
+		[class^="icon-"] {
+			position: relative;
+			top: 7px;
+			color: $dark-blue;
+			font-size: 4rem;
+		}
+
+		&:hover {
+			text-decoration: none;
+			background: rgba($blue, 0.75);
+		}
+	}
+}
+
+// CONTACT ROW
+.footer-contact {
+	padding: 20px 0 40px;
+	display: inline-block;
+	text-align: left;
+
+	@include mq-min($sm) {
+		// padding-bottom: 80px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	[class^="icon-"] {
+		position: absolute;
+		top: 5px;
+		left: 0;
+		font-size: 3.6rem;
+		width: 40px;
+		text-align: center;
+
+		@include mq-min($md) {
+			text-align: left;
+		}
+	}
+	.icon-mail {
+		top: 2px;
+	}
+	.icon-pin {
+		@include mq-min($md) {
+			left: -8px;
+		}
+	}
+}
+.footer-contact-item {
+	position: relative;
+	padding-left: 55px;
+	margin: 0 0 20px;
+
+	@include mq-min-max($sm,$md) {
+		margin-right: 15px;
+	}
+	&:nth-child(2) {
+		@include mq-min($md) {
+			padding-left: 70px;
+			margin-right: 50px;
+			margin-left: 50px;
+		}
+	}
+}
+.footer-contact-link {
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	color: $blue;
+
+	b {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 400;
+		color: $white;
+	}
+	&:hover b {
+		text-decoration: underline;
+	}
+}
+
+// COPYRIGHT NOTE, SOCIAL MEDIA
+.footer-foot {
+	@include clearfix();
+	padding-bottom: 56px;
+
+	@include mq-min($sm) {
+		padding-bottom: 76px;
+	}
+	@include mq-min($md) {
+		padding: 18px 0;
+	}
+}
+.footer-note {
+	display: block;
+	text-align: center;
+	font-size: 1.3rem;
+	line-height: 4rem;
+
+	@include mq-min($sm) {
+		float: left;
+	}
+}
+.social-media {
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+
+	@include mq-min($sm) {
+		float: right;
+		margin: 0 10px;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+	a {
+		display: block;
+		text-align: center;
+		font-size: 2rem;
+		line-height: 3.8rem;
+		width: 40px;
+		border: 1px solid $white;
+		border-radius: 50%;
+		color: $white;
+
+		&:hover {
+			text-decoration: none;
+			background: $blue;
+			border-color: $blue;
+		}
+	}
+	.icon-facebook,
+	.icon-instagram {
+		position: relative;
+		top: 2px;
+	}
+}

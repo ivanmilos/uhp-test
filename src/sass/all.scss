@@ -1,0 +1,17 @@
+// base
+@import "base/variables";
+@import "base/fonts";
+@import "base/icons";
+@import "base/mixins";
+@import "base/normalize";
+@import "base/global";
+@import "base/buttons";
+
+// vendor 
+@import "vendor/slick";
+
+// partials
+@import "partials/header";
+@import "partials/footer";
+@import "partials/content";
+@import "partials/slider";
