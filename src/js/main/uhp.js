@@ -7,12 +7,9 @@ uhp.init = function() {
 	_.$html = $('html');
 
 	_.nav();
-
-	_.$win.on('load', function(){
-		_.infograph();
-		_.toTop();
-		_.slider();
-	});
+	_.infograph();
+	_.toTop();
+	_.slider();
 };
 
 uhp.nav = function() {
